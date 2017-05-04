@@ -1,0 +1,15 @@
+# Example Docker-Compose for elastalert
+version: "3"
+services:
+  elastalert:
+    build: ./
+    command:
+    - "--verbose"
+    - "--debug"
+    volumes:
+    - "./rules:/rules"
+    - "./my-config.yaml:/config.yaml"
+    env_file: environment.txt
+    environment:
+      ES_HOST: "<es-cluster-domain>"
+      ES_PORT: 443

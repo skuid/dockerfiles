@@ -1,0 +1,9 @@
+*.swp
+*.sublime-project
+*.sublime-settings
+*.sublime-workspace
+.DS_Store
+.vscode
+.idea
+.env
+.out
