@@ -4,7 +4,7 @@ Repo to hold the dockerfiles for public repositories
 
 ## Images
 
-- [![Elastalert](https://quay.io/repository/skuid/elastalert/status "Elastalert")](https://quay.io/repository/skuid/elastalert)
+- Elastalert [![Elastalert](https://quay.io/repository/skuid/elastalert/status "Elastalert")](https://quay.io/repository/skuid/elastalert)
 
 ## New Images
 
