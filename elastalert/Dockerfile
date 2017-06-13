@@ -2,8 +2,8 @@ FROM python:2-alpine
 
 MAINTAINER Micah Hausler, <micah@skuid.com>
 
-LABEL OS_version= "alpine:3.4"
-LABEL Python_version= "2.7.13" 
+LABEL "OS_version"="alpine:3.4"
+LABEL "Python_version"="2.7.13" 
 
 RUN apk -U add \
     g++ \
