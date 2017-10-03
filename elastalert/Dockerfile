@@ -1,8 +1,8 @@
-FROM python:2-alpine
+FROM python:3.6.2-alpine3.6
 
 MAINTAINER Micah Hausler, <micah@skuid.com>
 
-LABEL "OS_version"="alpine:3.4"
+LABEL "OS_version"="alpine:3.6"
 LABEL "Python_version"="2.7.13" 
 
 RUN apk -U add \
