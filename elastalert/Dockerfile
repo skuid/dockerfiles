@@ -13,10 +13,7 @@ RUN apk -U add \
     openssl-dev \
     python-dev
 
-RUN pip install elastalert==0.1.29
-
-ENV AWS_KEY_ID ""
-ENV AWS_SECRET_KEY ""
+RUN pip install elastalert==0.1.32
 
 ADD config.yaml config.yaml
 VOLUME /rules
