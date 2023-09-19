@@ -14,4 +14,5 @@ EXPOSE 443
 
 STOPSIGNAL SIGTERM
 
-CMD ["nginx", "-g", "daemon off;"]
+COPY start.sh /bin/start.sh
+ENTRYPOINT ["/bin/start.sh"]
