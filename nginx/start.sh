@@ -20,7 +20,8 @@ then
 fi
 
 # if there are template files, process them
-if [ -e $INDIR/*.template ]
+COUNT=`ls -1 $INDIR/*.template |wc -l`
+if [ $COUNT -gt 0 ]
 then
 	OUTDIR=$2
 	if [ -z $OUTDIR ]
@@ -45,10 +46,15 @@ then
 		then
 		  DEST=${DEST_COMMENT:6}
 		fi
+		DESTFOLDER=`dirname $DEST`
+		if [ ! -d $DESTFOLDER ]
+		then
+			mkdir $DESTFOLDER
+		fi
 
 		# substitute everything appearing in $ENVVARS in the template
 		cat $i | envsubst "$ENVVARS" > $DEST
 	done
 fi
 
-exec nginx -g "daemon off;"
+exec nginx -c /etc/nginx/nginx.conf
