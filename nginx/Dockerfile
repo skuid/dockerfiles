@@ -1,4 +1,4 @@
-FROM openresty/openresty:1.21.4.2-0-alpine-fat
+FROM openresty/openresty:1.25.3.1-3-alpine-fat
 
 RUN apk update && apk add ca-certificates openssl
 RUN update-ca-certificates
