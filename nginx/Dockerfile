@@ -5,6 +5,7 @@ RUN update-ca-certificates
 
 RUN /usr/local/openresty/luajit/bin/luarocks install lunajson
 RUN /usr/local/openresty/luajit/bin/luarocks install lua-resty-http
+RUN useradd -s /bin/false nginx
 
 COPY mime.types /etc/nginx/mime.types
 COPY mime.types /opt/nginx/mime.types
